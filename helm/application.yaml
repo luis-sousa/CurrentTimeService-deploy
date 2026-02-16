@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/TEU_USER/currenttimeservice-deploy.git
+    repoURL: https://github.com/luis-sousa/currenttimeservice-deploy.git
     targetRevision: main             # branch ou tag
     path: helm/currenttimeservice    # caminho para o Helm chart
     helm:
