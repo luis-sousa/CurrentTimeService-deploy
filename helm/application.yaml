@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: currenttimeservice
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/TEU_USER/currenttimeservice-deploy.git
+    targetRevision: main             # branch ou tag
+    path: helm/currenttimeservice    # caminho para o Helm chart
+    helm:
+      valueFiles:
+        - values.yaml               # CI atualiza este arquivo com SHA
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

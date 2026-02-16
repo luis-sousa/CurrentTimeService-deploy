@@ -1,0 +1,8 @@
+image:
+  repository: docker.io/TEU_USER/currenttimeservice
+  tag: "SHA_DO_BUILD"         # atualizado pelo CI automaticamente
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80

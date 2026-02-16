@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currenttimeservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currenttimeservice
+  template:
+    metadata:
+      labels:
+        app: currenttimeservice
+    spec:
+      containers:
+        - name: currenttimeservice
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8080

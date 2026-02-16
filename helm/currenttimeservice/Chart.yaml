@@ -1,0 +1,5 @@
+apiVersion: v2
+name: currenttimeservice
+description: Helm chart for CurrentTimeService
+version: 0.1.0
+appVersion: "1.0.0"
