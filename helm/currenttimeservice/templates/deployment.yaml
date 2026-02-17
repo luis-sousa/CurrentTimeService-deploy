@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: currenttimeservice-test
+  name: currenttimeservice
 spec:
   replicas: 3
   selector:
