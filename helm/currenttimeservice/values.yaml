@@ -1,5 +1,5 @@
 image:
-  repository: docker.io/TEU_USER/currenttimeservice
+  repository: docker.io/luisousa16/currenttimeservice
   tag: "SHA_DO_BUILD"         # atualizado pelo CI automaticamente
   pullPolicy: IfNotPresent
 
