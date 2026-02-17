@@ -1,6 +1,6 @@
 image:
   repository: docker.io/luisousa16/currenttimeservice
-  tag: "SHA_DO_BUILD"         # atualizado pelo CI automaticamente
+  tag: "96c6ce6b00312a76df993e4a438dd5ad4b38ba81"
   pullPolicy: IfNotPresent
 
 service:
