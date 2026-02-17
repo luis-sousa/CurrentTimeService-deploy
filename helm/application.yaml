@@ -15,10 +15,14 @@ spec:
         - values.yaml               # CI atualiza este arquivo com SHA
 
   destination:
-    server: https://kubernetes.default.svc
-    namespace: default
+    server: https://kubernetes.default.svc #kubectl get svc
+    namespace: currenttimeservice
 
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
+
